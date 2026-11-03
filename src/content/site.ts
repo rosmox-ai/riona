@@ -33,7 +33,7 @@ export const site = {
 
   nav: [
     { label: "About", href: "/about" },
-    { label: "Our offerings", href: "/portfolio" },
+    { label: "Our focus", href: "/portfolio" },
     { label: "Partnerships", href: "/partnerships" },
     { label: "Contact", href: "/contact" },
   ] satisfies NavItem[],

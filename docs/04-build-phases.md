@@ -1,5 +1,7 @@
 # 04 · Build Phases
 
+> **Current direction:** The image-led redesign requested on 4 November supersedes conflicting simplifications below. See [Editorial redesign](05-editorial-redesign.md) and [Media assets](06-media-assets.md) for the implemented navigation, hero, imagery, SVGs and expanded routes. Startup fact constraints and two-font limit remain in force.
+
 Implementation plan derived from docs 01–03 and the content files. Each phase ends with a working, buildable site.
 
 **Status (4 November 2026):** phases 1–6 implemented in preview mode. Remaining work depends on client-supplied facts — see "Going live" in the project README.

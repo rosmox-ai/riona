@@ -12,12 +12,12 @@ export const metadata = pageMetadata({ ...partnerships.meta, path: "/partnership
 // PART-04 (FAQ) is added only when the company supplies real answers.
 export default function PartnershipsPage() {
   const { hero, opportunities, steps, enquiry } = partnerships;
-  const showOpportunities = site.partnershipTypes.length > 0 || site.isPreview;
+  const showOpportunities = site.partnershipTypes.length > 0;
 
   return (
     <>
       {/* PART-01 */}
-      <PageHero {...hero}>
+      <PageHero {...hero} image="/images/people.webp">
         <ButtonLink href={site.primaryAction.href}>{site.primaryAction.label}</ButtonLink>
       </PageHero>
 
@@ -36,8 +36,8 @@ export default function PartnershipsPage() {
       )}
 
       {/* PART-03 */}
-      <Section tone="mist" aria-labelledby="how-we-begin">
-        <h2 id="how-we-begin" className="text-section">
+      <Section id="how-we-begin" tone="mist" aria-labelledby="how-we-begin-title">
+        <h2 id="how-we-begin-title" className="text-section">
           {steps.title}
         </h2>
         <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">

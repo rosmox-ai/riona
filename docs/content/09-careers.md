@@ -1,5 +1,7 @@
 # Content 09 · Careers — Conditional Material
 
+> Updated visual/content scope: see [Editorial redesign](../05-editorial-redesign.md). The current site includes richer imagery, perspective pages and demo journal articles. The earlier instructions to omit these entirely are superseded; invented company claims remain excluded.
+
 A small careers page or Contact route is optional if the company is recruiting. Do not imply a large workforce, established training programme, benefits package or internal promotion record.
 
 - Heading: Do work that matters, every day.

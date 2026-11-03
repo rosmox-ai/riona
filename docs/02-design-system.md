@@ -1,5 +1,7 @@
 # 02 · Brand and Design System
 
+> **Current direction:** The image-led redesign requested on 4 November supersedes conflicting simplifications below. See [Editorial redesign](05-editorial-redesign.md) and [Media assets](06-media-assets.md) for the implemented navigation, hero, imagery, SVGs and expanded routes. Startup fact constraints and two-font limit remain in force.
+
 Working direction for a newly established Riona Life Science. Palette is provisional until brand assets arrive.
 
 ## 1. Light theme

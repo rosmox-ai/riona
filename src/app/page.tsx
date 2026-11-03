@@ -1,88 +1,18 @@
-import { site } from "@/content/site";
-import { home } from "@/content/pages/home";
-import { ImageSlot } from "@/components/ImageSlot";
+import Image from "next/image";
+import Link from "next/link";
+import { Hero } from "@/components/brand/Hero";
+import { Journal } from "@/components/brand/Journal";
+import { FocusCards } from "@/components/brand/FocusCards";
+import { Arrow } from "@/components/brand/Arrow";
 import { Invitation } from "@/components/Invitation";
-import { OfferingGrid } from "@/components/OfferingGrid";
-import { ButtonLink } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { TextLink } from "@/components/ui/TextLink";
-
-export default function Home() {
-  const { hero, whoWeAre, focus, approach } = home;
-  const showFocus = site.offerings.length > 0 || site.isPreview;
-
-  return (
-    <>
-      {/* HOME-01 · Hero */}
-      <section className="overflow-hidden bg-white">
-        <Container className="grid items-center gap-12 py-section lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <SectionHeading as="h1" size="display" eyebrow={hero.eyebrow} title={hero.title} lead={hero.lead} />
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={site.primaryAction.href}>{site.primaryAction.label}</ButtonLink>
-              <ButtonLink href={hero.secondaryAction.href} variant="secondary">
-                {hero.secondaryAction.label}
-              </ButtonLink>
-            </div>
-          </div>
-          <ImageSlot
-            brief="approved brand photograph of Riona's people or work"
-            className="aspect-[4/3] lg:col-span-5 lg:aspect-[4/5]"
-          />
-        </Container>
-      </section>
-
-      {/* HOME-02 · Who we are */}
-      <Section tone="mist" aria-labelledby="who-we-are" containerClassName="grid gap-6 lg:grid-cols-12 lg:gap-16">
-        <h2 id="who-we-are" className="text-section lg:col-span-5">
-          {whoWeAre.title}
-        </h2>
-        <div className="lg:col-span-7">
-          <p className="measure text-lead">{whoWeAre.text}</p>
-          <TextLink href={whoWeAre.link.href} className="mt-6">
-            {whoWeAre.link.label}
-          </TextLink>
-        </div>
-      </Section>
-
-      {/* HOME-03 · Our focus */}
-      {showFocus && (
-        <Section aria-labelledby="our-focus">
-          <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <SectionHeading id="our-focus" title={focus.title} lead={focus.lead} />
-            <TextLink href={focus.link.href} className="shrink-0">
-              {focus.link.label}
-            </TextLink>
-          </div>
-          <OfferingGrid
-            items={site.offerings.slice(0, 3)}
-            actionLabel="Learn more"
-            actionHref="/portfolio"
-            slotLabel="Confirmed offering name"
-          />
-        </Section>
-      )}
-
-      {/* HOME-04 · Our approach */}
-      <Section tone="ink" aria-labelledby="our-approach">
-        <h2 id="our-approach" className="max-w-3xl text-section">
-          {approach.title}
-        </h2>
-        <ul className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
-          {approach.items.map((item) => (
-            <li key={item.title}>
-              <span aria-hidden="true" className="mb-5 block h-0.5 w-10 bg-teal" />
-              <h3 className="text-card">{item.title}</h3>
-              <p className="mt-3">{item.text}</p>
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* HOME-06 · Conversation */}
-      <Invitation />
-    </>
-  );
-}
+export default function Home(){return <>
+  <Hero />
+  <div className="explore-strip"><span>EXPLORE RIONA</span><Link href="/about">Our company<Arrow /></Link><Link href="/quality">Our approach to quality<Arrow /></Link><Link href="/partnerships">Working together<Arrow /></Link></div>
+  <section className="intro-section wide-container"><div><span className="overline">A NEW CHAPTER IN LIFE SCIENCE</span><h2>Rooted in science.<br/>Inspired by people.</h2></div><div className="intro-body"><p>We are building Riona around a simple belief: quality and care belong at the heart of healthcare.</p><p>As a new pharmaceutical company, our journey begins with thoughtful decisions, open conversations and a commitment to the people behind every healthcare need.</p><Link href="/about" className="inline-arrow">Get to know Riona<Arrow /></Link></div></section>
+  <section className="focus-section"><div className="wide-container"><div className="section-heading-row"><div><span className="overline">WHAT GUIDES US</span><h2>A shared focus.<br/>A meaningful purpose.</h2></div><p className="section-description">The principles shaping our approach to science, healthcare and the relationships we build.</p></div><FocusCards /></div></section>
+  <section className="image-story"><div className="image-story-photo"><Image src="/images/science.webp" alt="Illustrative close-up of a laboratory vial" fill sizes="(max-width: 800px) 100vw, 50vw"/><span className="image-caption">A closer look. A more considered approach.</span></div><div className="image-story-copy"><span className="overline">OUR APPROACH</span><h2>Quality starts<br/>with how we think.</h2><p>In healthcare, the details deserve our attention. We aim to make quality part of how we work, from the questions we ask to the commitments we make.</p><div className="approach-lines"><div><span>01</span><div><h3>Ask thoughtful questions</h3><p>Understand the need before exploring the next step.</p></div></div><div><span>02</span><div><h3>Make considered decisions</h3><p>Bring care and clarity to the choices that matter.</p></div></div><div><span>03</span><div><h3>Keep the conversation open</h3><p>Build relationships through honest communication.</p></div></div></div><Link href="/quality" className="inline-arrow">Our quality mindset<Arrow /></Link></div></section>
+  <Journal />
+  <section className="people-feature"><div className="people-feature-copy"><svg aria-hidden="true" className="feature-lines" viewBox="0 0 700 650" fill="none"><path d="M-200 100 800 600M-100 500 800 0M50 800 600-100" stroke="white" strokeOpacity=".12"/></svg><span className="overline">PEOPLE & PURPOSE</span><h2>Great possibilities<br/>begin with people.</h2><p>Different perspectives. Shared curiosity. A belief that meaningful work starts with care. These are the qualities we want to bring together as Riona grows.</p><Link href="/careers" className="light-outline">Explore life at Riona<Arrow /></Link></div><div className="people-feature-photo"><Image src="/images/people.webp" alt="Illustrative scientists exchanging ideas; not a photograph of Riona employees" fill sizes="(max-width: 800px) 100vw, 50vw" /></div></section>
+  <section className="partnership-teaser wide-container"><span className="overline">LET’S MOVE FORWARD, TOGETHER</span><h2>Good partnerships begin<br/>with a clear conversation.</h2><p>Tell us about your organisation, your needs and what you are working towards. We would welcome the opportunity to explore the next step.</p><Link href="/partnerships" className="inline-arrow">Partner with Riona<Arrow /></Link></section>
+  <Invitation />
+</>;}

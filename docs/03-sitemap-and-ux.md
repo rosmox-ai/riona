@@ -1,5 +1,7 @@
 # 03 · Sitemap, Page Blueprints and UX
 
+> **Current direction:** The image-led redesign requested on 4 November supersedes conflicting simplifications below. See [Editorial redesign](05-editorial-redesign.md) and [Media assets](06-media-assets.md) for the implemented navigation, hero, imagery, SVGs and expanded routes. Startup fact constraints and two-font limit remain in force.
+
 This replaces the earlier large-company launch plan. Section IDs correspond to the revised content files.
 
 ## 1. Audience and objective

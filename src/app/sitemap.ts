@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { stories } from "@/content/editorial";
 import { site } from "@/content/site";
 
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
   "/portfolio",
   "/partnerships",
   "/contact",
+  "/science",
+  "/quality",
+  "/careers",
+  "/insights",
+  ...stories.map(story => `/insights/${story.slug}`),
   "/legal/privacy-policy",
   "/legal/terms-of-use",
   "/accessibility",

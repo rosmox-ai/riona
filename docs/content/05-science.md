@@ -1,5 +1,7 @@
 # Content 05 · Science — Conditional Material
 
+> Updated visual/content scope: see [Editorial redesign](../05-editorial-redesign.md). The current site includes richer imagery, perspective pages and demo journal articles. The earlier instructions to omit these entirely are superseded; invented company claims remain excluded.
+
 Not a launch page unless the company confirms actual scientific services or research activity. The company name alone is not evidence of an R&D department, laboratory or development platform.
 
 Reusable heading: **Good medicine starts with good science.**

@@ -1,39 +1,6 @@
-import { site } from "@/content/site";
-import { offerings } from "@/content/pages/offerings";
-import { Invitation } from "@/components/Invitation";
-import { OfferingGrid } from "@/components/OfferingGrid";
 import { PageHero } from "@/components/PageHero";
-import { Section } from "@/components/ui/Section";
+import { FocusCards } from "@/components/brand/FocusCards";
+import { Invitation } from "@/components/Invitation";
 import { pageMetadata } from "@/lib/metadata";
-
-export const metadata = pageMetadata({ ...offerings.meta, path: "/portfolio" });
-
-// PORT-04 (information notice) is added only if medicine information is published.
-export default function OfferingsPage() {
-  const { hero, list, enquiry } = offerings;
-  const showList = site.offerings.length > 0 || site.isPreview;
-
-  return (
-    <>
-      {/* PORT-01 */}
-      <PageHero {...hero} />
-
-      {/* PORT-02 */}
-      {showList && (
-        <Section aria-labelledby="offerings-list">
-          <h2 id="offerings-list" className="mb-12 text-section">
-            {list.title}
-          </h2>
-          <OfferingGrid
-            items={site.offerings}
-            actionLabel={list.action}
-            slotLabel="Confirmed product category or service"
-          />
-        </Section>
-      )}
-
-      {/* PORT-03 */}
-      <Invitation heading={enquiry.heading} text={enquiry.text} actionLabel={enquiry.action} />
-    </>
-  );
-}
+export const metadata=pageMetadata({title:"Our focus",description:"Explore the principles shaping Riona's approach to healthcare.",path:"/portfolio"});
+export default function PortfolioPage(){return <><PageHero eyebrow="OUR FOCUS" title="Built around healthcare needs." lead="Science, quality, care and collaboration. A shared focus for the company we are building." image="/images/medicines.webp"/><section className="focus-section"><div className="wide-container"><div className="section-heading-row"><div><span className="overline">OUR PERSPECTIVE</span><h2>A considered approach.<br/>At every step.</h2></div><p className="section-description">Explore the ideas that guide us. For specific product or business requirements, start a conversation with Riona.</p></div><FocusCards/></div></section><Invitation heading="Looking for something specific?" text="Tell us about your requirements and we can discuss the next steps."/></>;}

@@ -1,5 +1,4 @@
 import { about } from "@/content/pages/about";
-import { EditorialNote } from "@/components/EditorialNote";
 import { Invitation } from "@/components/Invitation";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -13,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ABOUT-01 */}
-      <PageHero {...hero} />
+      <PageHero {...hero} image="/images/people.webp" />
 
       {/* ABOUT-02 · Purpose */}
       <Section aria-labelledby="who-we-are" containerClassName="grid gap-6 lg:grid-cols-12 lg:gap-16">
@@ -24,7 +23,6 @@ export default function AboutPage() {
           {purpose.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          <EditorialNote>{purpose.editorialNote}</EditorialNote>
         </div>
       </Section>
 

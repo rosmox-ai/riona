@@ -1,5 +1,7 @@
 # Content 02 · Home
 
+> Updated visual/content scope: see [Editorial redesign](../05-editorial-redesign.md). The current site includes richer imagery, perspective pages and demo journal articles. The earlier instructions to omit these entirely are superseded; invented company claims remain excluded.
+
 Demo wording, without invented scale or operating claims. IDs match the page blueprint.
 
 ## HOME-01 · Hero
